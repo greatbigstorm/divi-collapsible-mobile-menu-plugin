@@ -1,0 +1,61 @@
+/* Parent Menu Item Link */
+#main-header .et_mobile_menu.dcmm-collapsible .menu-item-has-children > a {
+	position: relative;
+	padding-right: 45px;
+	background-color: transparent;
+}
+
+
+/* Menu Toggle */
+#main-header .et_mobile_menu.dcmm-collapsible .dcmm-menu-toggle {
+	position: absolute;
+	top:    0;
+	bottom: 0;
+	right:  0;
+	width:  45px;
+}
+/* Toggle Divider/Border */
+#main-header .et_mobile_menu.dcmm-collapsible .dcmm-menu-toggle::before {
+	content: '';
+	position: absolute;
+	top:    2px;
+	bottom: 2px;
+	left:   0;
+	width:  1px;
+	background: rgba(0, 0, 0, 0.03);
+}
+/* Toggle Icon */
+#main-header .et_mobile_menu.dcmm-collapsible .dcmm-menu-toggle::after {
+	font-family: 'ETmodules'; text-align: center; speak: none; font-weight: normal; font-variant: normal; text-transform: none; -webkit-font-smoothing: antialiased; position: absolute;
+}
+#main-header .et_mobile_menu.dcmm-collapsible .dcmm-menu-toggle::after {
+	content: '\4c';  /* "+" */
+	display: block;
+	position: absolute;
+	top:  50%;
+	left: 50%;
+	margin-top:  -0.5em;
+	margin-left: -0.5em;
+	width:  1em;
+	height: 1em;
+	font-size: 1em;
+	line-height: 1;
+	-webkit-transition: 0.2s all ease-out;
+	        transition: 0.2s all ease-out;
+}
+#main-header .et_mobile_menu.dcmm-collapsible .dcmm-visible > a .dcmm-menu-toggle::after { 
+	transform: rotate(-45deg);
+}
+
+
+/* Sub-menus */
+#main-header .et_mobile_menu.dcmm-collapsible ul.sub-menu { 
+	display:    none !important;
+	visibility: hidden !important;
+	-webkit-transition: all 1.5s ease-in-out;
+	        transition: all 1.5s ease-in-out;
+}
+#main-header .et_mobile_menu.dcmm-collapsible .dcmm-visible > ul.sub-menu { 
+	display:    block !important;
+	visibility: visible !important; 
+}
