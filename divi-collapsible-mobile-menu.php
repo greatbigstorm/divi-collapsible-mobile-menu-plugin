@@ -9,7 +9,7 @@
  * Version: 1.0
  */
 
-define( 'DCMM_PLUGIN_VERSION', '1.0b2' );
+define( 'DCMM_PLUGIN_VERSION', '1.0' );
 
 define( 'DCMM_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 add_action( 'init', function() {  // plugins path is filterable, so set after filters can be registered
@@ -28,3 +28,15 @@ add_action( 'wp_enqueue_scripts', function () {
 	/* Scripts */
 	wp_enqueue_script( 'dcmm', DCMM_PLUGIN_URL . 'public/js/script.js', array(), DCMM_PLUGIN_VERSION, true );
 } );
+
+
+
+/* !===== Plugin Updates ===== */
+
+require 'library/plugin-update-checker/plugin-update-checker.php';
+
+$dcmm_update_checker = Puc_v4_Factory::buildUpdateChecker(
+	'https://bitbucket.org/weaselnerd/divi-collapsible-mobile-menu-plugin',
+	__FILE__,
+	'divi-collapsible-mobile-menu'
+);
