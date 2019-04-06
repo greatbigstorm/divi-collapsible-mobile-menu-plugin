@@ -1,0 +1,3 @@
+[submodule "library/plugin-update-checker"]
+	path = library/plugin-update-checker
+	url = https://github.com/YahnisElsts/plugin-update-checker.git
