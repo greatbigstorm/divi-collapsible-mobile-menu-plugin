@@ -13,6 +13,8 @@
 	bottom: 0;
 	right:  0;
 	width:  45px;
+	/* Adjust the icon size here without affecting its overall positioning */
+	font-size: 1.5em;
 }
 /* Toggle Divider/Border */
 #main-header .et_mobile_menu.dcmm-collapsible .dcmm-menu-toggle::before {
@@ -43,19 +45,19 @@
 	-webkit-transition: 0.2s all ease-out;
 	        transition: 0.2s all ease-out;
 }
-#main-header .et_mobile_menu.dcmm-collapsible .dcmm-visible > a .dcmm-menu-toggle::after { 
+#main-header .et_mobile_menu.dcmm-collapsible .dcmm-visible > a .dcmm-menu-toggle::after {
 	transform: rotate(-45deg);
 }
 
 
 /* Sub-menus */
-#main-header .et_mobile_menu.dcmm-collapsible ul.sub-menu { 
+#main-header .et_mobile_menu.dcmm-collapsible ul.sub-menu {
 	display:    none !important;
 	visibility: hidden !important;
 	-webkit-transition: all 1.5s ease-in-out;
 	        transition: all 1.5s ease-in-out;
 }
-#main-header .et_mobile_menu.dcmm-collapsible .dcmm-visible > ul.sub-menu { 
+#main-header .et_mobile_menu.dcmm-collapsible .dcmm-visible > ul.sub-menu {
 	display:    block !important;
-	visibility: visible !important; 
+	visibility: visible !important;
 }
