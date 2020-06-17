@@ -6,10 +6,10 @@
  * Author:     Big Storm
  * Author URI: https://greatbigstorm.com/
  *
- * Version: 1.1
+ * Version: 1.2.1
  */
 
-define( 'DCMM_PLUGIN_VERSION', '1.1' );
+define( 'DCMM_PLUGIN_VERSION', '1.2.1' );
 
 define( 'DCMM_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 add_action( 'init', function() {  // plugins path is filterable, so set after filters can be registered
