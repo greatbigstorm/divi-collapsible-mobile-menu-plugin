@@ -1,7 +1,8 @@
 /* Parent Menu Item Link */
 #main-header .et_mobile_menu.dcmm-collapsible .menu-item-has-children > a {
 	position: relative;
-	padding-right: 45px;
+	padding-right: 55px;
+	padding-right: calc(45px + 5%);
 	background-color: transparent;
 }
 
