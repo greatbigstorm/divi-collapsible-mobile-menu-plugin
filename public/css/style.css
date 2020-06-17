@@ -5,6 +5,9 @@
 	padding-right: calc(45px + 5%);
 	background-color: transparent;
 }
+#main-header .et_mobile_menu.dcmm-collapsible .menu-item-has-children > a:hover {
+	background-color: rgba(0, 0, 0, 0.03);  /* restore Divi's default hover effect */
+}
 
 
 /* Menu Toggle */
