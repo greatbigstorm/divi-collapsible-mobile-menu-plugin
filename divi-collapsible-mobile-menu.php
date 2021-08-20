@@ -2,14 +2,15 @@
 /**
  * Plugin Name: Divi Collapsible Mobile Menu
  * Description: Allows sub-menus in Divi's mobile menu to be toggled opened and closed.
+ * Plugin URI:  https://github.com/greatbigstorm/divi-collapsible-mobile-menu-plugin
  *
- * Author:     Big Storm
- * Author URI: https://greatbigstorm.com/
+ * Author:      Big Storm
+ * Author URI:  https://greatbigstorm.com/
  *
- * Version: 1.3.0
+ * Version:     1.3.1
  */
 
-define( 'DCMM_PLUGIN_VERSION', '1.3.0' );
+define( 'DCMM_PLUGIN_VERSION', '1.3.1' );
 
 define( 'DCMM_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 add_action( 'init', function() {  // plugins path is filterable, so set after filters can be registered
@@ -32,11 +33,13 @@ add_action( 'wp_enqueue_scripts', function () {
 
 
 /* !===== Plugin Updates ===== */
+// ref: https://github.com/YahnisElsts/plugin-update-checker#github-integration
 
 require 'library/plugin-update-checker/plugin-update-checker.php';
 
 $dcmm_update_checker = Puc_v4_Factory::buildUpdateChecker(
-	'https://bitbucket.org/weaselnerd/divi-collapsible-mobile-menu-plugin',
+	'https://github.com/greatbigstorm/divi-collapsible-mobile-menu-plugin/',
 	__FILE__,
-	'divi-collapsible-mobile-menu'
+	'divi-collapsible-mobile-menu-plugin'
 );
+$dcmm_update_checker->setBranch( 'master' );
